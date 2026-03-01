@@ -1,6 +1,6 @@
 /* Variables para facilitar cambios rápidos */
 :root {
-    --fondo-marino: #000b18;      /* Azul marino casi negro */
+    --fondo-marino: #011d3f;      /* Azul marino casi negro */
     --azul-electrico: #00d4ff;    /* Cian brillante */
     --verde-neon: #00ff88;       /* Verde para el botón principal */
     --texto-blanco: #f0f0f0;
@@ -15,7 +15,7 @@
 body {
     background-color: var(--fondo-marino);
     background-image: url(assets/electricista.jpeg);
-    background-blend-mode: difference;
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,8 +35,8 @@ body {
     border-radius: 25px;
     padding: 30px;
     text-align: center;
-    border: 1px solid rgba(0, 212, 255, 0.1);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(172, 241, 255, 0.1);
+    box-shadow: 0 8px 8px rgba(85, 85, 85, 0.3);
     backdrop-filter: blur(10px); /* Glassmorphism */
 }
 
@@ -145,32 +145,7 @@ h1 {
     text-decoration: none;
 }
 
-/* efecto rayo */
-.rayo {
-    position: fixed;
-    top: 0;
-    left: -100px;
-    width: 2px;
-    height: 100vh;
-    background: linear-gradient(to bottom, transparent, var(--azul-electrico), transparent);
-    filter: blur(4px);
-    opacity: 0;
-    /* z-index: -1; Va detrás de todo */
-    transform: rotate(25deg);
-}
 
-@keyframes relampago {
-    0% { left: -10%; opacity: 0; }
-    10% { opacity: 0.5; }
-    20% { opacity: 0; }
-    21% { opacity: 0.8; }
-    25% { left: 110%; opacity: 0; }
-    100% { left: 110%; opacity: 0; }
-}
-
-.animar-rayo {
-    animation: relampago 1.5s ease-out;
-}
 
 .hero {
     background: linear-gradient(135deg, var(--azul-electrico) 0%, var(--verde-neon) 100%);
@@ -179,3 +154,4 @@ h1 {
     margin-bottom: 30px;
     
 }
+
