@@ -14,6 +14,11 @@
 
 body {
     background-color: var(--fondo-marino);
+    background-image: url(assets/electricista.jpeg);
+    background-blend-mode: difference;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: var(--texto-blanco);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
@@ -138,4 +143,39 @@ h1 {
 .powered-by a {
     color: var(--azul-electrico);
     text-decoration: none;
+}
+
+/* efecto rayo */
+.rayo {
+    position: fixed;
+    top: 0;
+    left: -100px;
+    width: 2px;
+    height: 100vh;
+    background: linear-gradient(to bottom, transparent, var(--azul-electrico), transparent);
+    filter: blur(4px);
+    opacity: 0;
+    /* z-index: -1; Va detrás de todo */
+    transform: rotate(25deg);
+}
+
+@keyframes relampago {
+    0% { left: -10%; opacity: 0; }
+    10% { opacity: 0.5; }
+    20% { opacity: 0; }
+    21% { opacity: 0.8; }
+    25% { left: 110%; opacity: 0; }
+    100% { left: 110%; opacity: 0; }
+}
+
+.animar-rayo {
+    animation: relampago 1.5s ease-out;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--azul-electrico) 0%, var(--verde-neon) 100%);
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    
 }

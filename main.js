@@ -40,3 +40,22 @@ END:VCARD`;
     a.download = `${CONFIG.nombre.replace(" ", "_")}.vcf`;
     a.click();
 }
+
+function dispararRayo() {
+    const rayo = document.createElement('div');
+    rayo.className = 'rayo animar-rayo';
+    // Posición aleatoria en el eje Y para que no siempre salga igual
+    rayo.style.top = Math.random() * 20 + "%"; 
+    
+    document.body.appendChild(rayo);
+
+    // Lo eliminamos después de la animación para no llenar el DOM de basura
+    setTimeout(() => {
+        rayo.remove();
+    }, 1000);
+
+    // Volver a disparar en un tiempo aleatorio entre 4 y 10 segundos
+    setTimeout(dispararRayo, Math.random() * 4000 + 4000);
+}
+
+dispararRayo();
