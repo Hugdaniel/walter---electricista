@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vCard Digital - Walter Caballero</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container">
+        <div id="particles-js"></div>
+
+        <header>
+            <div class="profile-img">
+                <!-- <img src="https://via.placeholder.com/150" alt="Walter Caballero"> -->
+            </div>
+            <h1 id="nombre"></h1>
+            <p id="profesion" class="glow-text"></p>
+        </header>
+
+        <main id="botones-container">
+        </main>
+
+        <footer>
+            <button onclick="descargarVCard()" class="btn-main-glow">GUARDAR EN CONTACTOS</button>
+            <div class="powered-by">
+                <p>Diseñado por <strong><a href="https://vcard-visiondesign.netlify.app/">Vision Design</a></strong></p>
+                <small>Tu Identidad Digital</small>
+            </div>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
