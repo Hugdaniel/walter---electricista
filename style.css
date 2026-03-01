@@ -143,6 +143,7 @@ h1 {
 .powered-by a {
     color: var(--azul-electrico);
     text-decoration: none;
+    font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 
